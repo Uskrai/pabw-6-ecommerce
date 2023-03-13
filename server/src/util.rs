@@ -2,6 +2,7 @@ use std::str::FromStr;
 
 use argon2::{Argon2, PasswordHash, PasswordHasher, PasswordVerifier};
 use bson::oid::ObjectId;
+use num_bigint::BigInt;
 use serde::{Deserialize, Serialize};
 use time::OffsetDateTime;
 

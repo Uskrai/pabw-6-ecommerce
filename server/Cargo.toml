@@ -14,9 +14,16 @@ bson = { version = "2.5.0", features = ["time-0_3"] }
 dotenvy = "0.15.6"
 jsonwebtoken = "8.2.0"
 mongodb = { version = "2.4.0", features = ["tracing"] }
+num-bigint = { version = "0.4.3", features = ["serde"] }
 password-hash = { version = "0.5.0", features = ["std"] }
 rand = "0.8.5"
 serde = { version = "1.0.152", features = ["derive"] }
 serde_json = "1.0.94"
 thiserror = "1.0.39"
 time = { version = "0.3.20", features = ["serde-human-readable"] }
+tokio = { version = "1.26.0", features = ["rt-multi-thread"] }
+tower = { version = "0.4.0", features = ["util"] }
+tower-http = { version = "0.4.0", features = ["trace", "fs"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
+validator = { version = "0.16.0", features = ["derive"] }
