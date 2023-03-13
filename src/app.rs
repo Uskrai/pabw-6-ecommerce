@@ -2,6 +2,7 @@ use axum::extract::FromRef;
 
 use crate::api::v1::{
     auth::UserCollection,
+    product::ProductCollection,
     token::{JwtState, RefreshTokenCollection},
 };
 
@@ -13,6 +14,7 @@ pub struct AppState {
     mongo_client: mongodb::Client,
     token_collection: RefreshTokenCollection,
     user_collection: UserCollection,
+    product_collection: ProductCollection,
 }
 
 impl AppState {
@@ -33,6 +35,7 @@ impl AppState {
             mongo_client,
             token_collection: RefreshTokenCollection(db.collection("refresh_tokens")),
             user_collection: UserCollection(db.collection("users")),
+            product_collection: ProductCollection(db.collection("products")),
         })
     }
 }
